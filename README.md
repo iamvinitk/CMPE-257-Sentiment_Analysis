@@ -3,7 +3,7 @@
 ## Team Members
 
 - [Prabhath Reddy Gujavarthy](https://github.com/prabhath-r)
-- [Reshma Chowdary Bobba]()
+- [Reshma Chowdary Bobba](https://github.com/ReshmaBC)
 - [Sathvick Reddy Narahari](https://github.com/SathvickN)
 - [Vinit Kanani](https://www.github.com/iamvinitk)
 
