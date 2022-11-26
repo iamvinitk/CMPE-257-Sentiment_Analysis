@@ -1,6 +1,6 @@
 ---
-title: Semester Project [rename]
-date: "October 2021"
+title: Sentiment Analysis
+date: "Nov 2021"
 author: Carlos Rojas, San José State University
 
 header-includes: |
