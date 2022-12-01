@@ -1,7 +1,11 @@
 ---
 title: Sentiment Analysis
 date: "Nov 2021"
-author: Prabhath Reddy Gujavarthy, Reshma Chowdary Bobba, Sathvick Reddy Narahari, Vinit Kanani
+author: 
+  - Prabhath Reddy Gujavarthy, San José State University
+  - Reshma Chowdary Bobba, San José State University
+  - Sathvick Reddy Narahari, San José State University
+  - Vinit Kanani, San José State University
 
 header-includes: |
   \usepackage{booktabs}
@@ -25,7 +29,9 @@ We performed various data cleaning techniques before performing classification.
 Firstly, we checked for missing values in the dataset, and luckily the dataset was compiled properly, so they were labeled properly and had no missing values.
 Since the data is collected from the web it is not very clean and has many stopwords in it.
 Strings such as ‘http’, ‘@..’, ‘#...’, adds no significant meaning to the model, and unnecessarily takes up disk storage and increases the time complexity of the model. 
-![Data cleaning](images/img.png)
+
+![Fig()](./images/img.png "Fig. Data cleaning")\
+*Fig. Data cleaning*
 
 The total mentions of those characters and tags in the dataset makeup to more than 800k, and so we removed them to improve the model performance. 
 There are many more stopwords that are pre-trained in the natural language toolkit(NLTK) library, that take up to about 15% of the total storage taken up by the dataset.
@@ -49,13 +55,16 @@ All these methods use different approaches to learn from the data and each appro
 We plotted word clouds for all the positive and negative labels, to visualize the most frequent words after removing the stopwords.
 
 ### Word cloud for the entire dataset
-![Word cloud](images/all_word_cloud.png)
+![Fig()](./images/all_word_cloud.png "Fig. Word cloud")\
+*Fig. Word cloud*
 
 ### Word cloud for positive tweets
-![Positive word cloud](images/positive_word_cloud.png)
+![Fig()](./images/positive_word_cloud.png "Fig. Positive Word cloud")\
+*Fig. Positive Word cloud*
 
-### Word Cloud for negative tweets
-![Negative word cloud](images/negative_word_cloud.png)
+### Word cloud for negative tweets
+![Fig()](./images/negative_word_cloud.png "Fig. Negative Word cloud")\
+*Fig. Negative Word cloud*
 
 
 #### Observations
@@ -79,7 +88,8 @@ The Directed Acyclic Graph method is used to capture random, hierarchical, and e
 The dirichlet distribution is represented by the list of all words that were extracted from the corpus after the stopwords were removed and text processing was completed.
 Through a Directed Acyclic Graph, each topic created by a PAM is connected to the Dirichlet distribution (DAG).
 
-![Topic using PAM](images/pam.png)
+![Fig()](./images/pam.png "Fig. PAM")\
+*Fig. PAM*
 
 # Comparisons
 
