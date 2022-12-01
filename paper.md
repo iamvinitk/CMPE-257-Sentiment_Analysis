@@ -40,11 +40,12 @@ We plotted word clouds for all the positive and negative labels, to visualize th
 
 
 ### Word cloud for positive tweets
-<img width="986" alt="Screen Shot 2022-11-30 at 3 12 19 PM" src="https://user-images.githubusercontent.com/71260061/204966256-d39f7f2b-8bd5-4dac-8960-219cba838b83.png">
+<img width="983" alt="Screen Shot 2022-11-30 at 3 12 19 PM" src="https://user-images.githubusercontent.com/71260061/204966256-d39f7f2b-8bd5-4dac-8960-219cba838b83.png">
 
 
 ### Word Cloud for negative tweets!
-[Uploading Screen Shot 2022-11-30 at 3.12.38 PM.png…]()
+<img width="983" alt="Screen Shot 2022-11-30 at 3 12 38 PM" src="https://user-images.githubusercontent.com/71260061/204967893-864b7158-de1f-4d6a-987d-7210cdcdafb7.png">
+
 
 
 #### Observations
