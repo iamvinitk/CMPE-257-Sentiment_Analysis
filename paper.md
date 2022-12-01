@@ -38,10 +38,10 @@ We plotted word clouds for all the positive and negative labels, to visualize th
 IMG 2
 
 ### Word cloud for positive tweets
-IMG 3
+![Positive word cloud](images/positive_word_cloud.png)
 
 ### Word Cloud for negative tweets
-IMG 4
+![Negative word cloud](images/negative_word_cloud.png)
 
 #### Observations
 Learning from the data:
@@ -61,7 +61,7 @@ Our data deals with text and its keywords. Since the machine doesn't actually kn
 # Comparisons
 
 # Example Analysis
-
+  
 # Conclusions
 
 
