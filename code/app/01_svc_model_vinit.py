@@ -70,7 +70,7 @@ train_features = scaler.transform(train_features)
 test_features = scaler.transform(test_features)
 
 
-# In[ ]:
+# In[21]:
 
 
 # SVC model
@@ -82,7 +82,7 @@ svc.fit(train_features, train_labels)
 predictions = svc.predict(test_features)
 
 
-# In[ ]:
+# In[22]:
 
 
 # calculate f1 score

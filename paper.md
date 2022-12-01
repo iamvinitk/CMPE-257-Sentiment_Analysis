@@ -1,7 +1,7 @@
 ---
 title: Sentiment Analysis
 date: "Nov 2021"
-author: Carlos Rojas, San José State University
+author: Prabhath Reddy Gujavarthy, Reshma Chowdary Bobba, Sathvick Reddy Narahari and Vinit Kanani 
 
 header-includes: |
   \usepackage{booktabs}
@@ -15,6 +15,11 @@ Pizza [@pizza2000identification] is an understudied yet widely utilized implemen
 # Introduction
 
 # Methods
+1. Preprocessing
+2. SVD
+3. Decision Tree
+4. Naive Bayes
+5. Topic Modelling
 
 # Comparisons
 
