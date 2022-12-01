@@ -1,7 +1,7 @@
 ---
 title: Sentiment Analysis
 date: "Nov 2021"
-author: Prabhath Reddy Gujavarthy, Reshma Chowdary Bobba, Sathvick Reddy Narahari and Vinit Kanani 
+author: Carlos Rojas, San José State University
 
 header-includes: |
   \usepackage{booktabs}
@@ -18,7 +18,8 @@ The exponential growth of people using the internet has allowed them to share th
 
 # Data Preprocessing
 We performed various data cleaning techniques before performing classification. Firstly, we checked for missing values in the dataset, and luckily the dataset was compiled properly so they were labeled properly and had no missing values. Since the data is collected from the web it is not very clean and has many stopwords in it. Strings such as ‘http’, ‘@..’, ‘#...’, adds no significant meaning to the model, and unnecessarily takes up disk storage and increases the time complexity of the model. 
-IMG-1
+<img width="647" alt="Screen Shot 2022-11-30 at 2 51 35 PM" src="https://user-images.githubusercontent.com/71260061/204966202-dfde90b7-3afd-435f-82b6-cd8590ba475f.png">
+
 The total mentions of those characters and tags in the dataset makeup to more than 800k, and so we removed them to improve the model performance. There are many more stopwords that are pre trained in the natural language toolkit(NLTK) library, that take up to about 15% of the total storage taken up by the dataset. We defined a function to remove all those stop words defined in the library, and called it on the train set. 
 ## Train & Test Data Labels:
 
@@ -35,13 +36,16 @@ We tried to mix and match all these approaches in our various methods while test
 We plotted word clouds for all the positive and negative labels, to visualize the most frequent words after removing the stopwords.
 
 ### Word cloud for the entire dataset
-IMG 2
+<img width="983" alt="Screen Shot 2022-11-30 at 2 54 36 PM" src="https://user-images.githubusercontent.com/71260061/204966305-31ebfb30-f0f6-410c-b3bd-3879df2f23f2.png">
+
 
 ### Word cloud for positive tweets
-IMG 3
+<img width="986" alt="Screen Shot 2022-11-30 at 3 12 19 PM" src="https://user-images.githubusercontent.com/71260061/204966256-d39f7f2b-8bd5-4dac-8960-219cba838b83.png">
 
-### Word Cloud for negative tweets
-IMG 4
+
+### Word Cloud for negative tweets!
+[Uploading Screen Shot 2022-11-30 at 3.12.38 PM.png…]()
+
 
 #### Observations
 Learning from the data:
@@ -49,14 +53,9 @@ There’s clearly a pattern between the words which we generally define as eithe
 
 
 # Methods
-
-
 Our data deals with text and its keywords. Since the machine doesn't actually know what those keywords actually are, it needs to learn from that data to know which words determine which sentiment. We used the Tf-Idf vectorizer by SciKit Learn for doing that. It adds weights to a word based on the total number of times the word has appeared in the dataset. The function can also retrieve the number of features we require based on our input.
-1. Preprocessing
-2. SVD
-3. Decision Tree
-4. Naive Bayes
-5. Topic Modelling
+
+TO DO : CLASSIFICATION METHODS
 
 # Comparisons
 
