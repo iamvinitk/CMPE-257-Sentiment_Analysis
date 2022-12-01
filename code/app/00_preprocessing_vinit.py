@@ -1,18 +1,8 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[6]:
-
-
 import pandas as pd
 from nltk.tokenize import word_tokenize
 from nltk.corpus import stopwords
 from nltk.stem import WordNetLemmatizer
 import re
-
-
-# In[7]:
-
 
 data = pd.read_csv('./data/training.csv', encoding="ISO-8859-1", header=None)
 data.columns = ['sentiment', 'id', 'date', 'query', 'user', 'tweet']
@@ -21,18 +11,8 @@ print(data.head())
 
 print("Size of the dataset", data.shape)
 
-
-# In[8]:
-
-
 print("Missing Values \n\n", data.isnull().sum())
 print("Duplicated Values \n", data.duplicated().sum())
-
-
-# #### There are no missing or duplicate values.
-
-# In[ ]:
-
 
 # Preprocessing
 print("Number of http links", data['tweet'].str.count('http').sum())
@@ -46,10 +26,6 @@ data['tweet'] = data['tweet'].str.replace(r'#\S+', '', case=False, regex=True)
 
 print("Number of RT", data['tweet'].str.count('RT').sum())
 data['tweet'] = data['tweet'].str.replace(r'RT', '', case=False, regex=True)
-
-
-# In[5]:
-
 
 stop_words = set(stopwords.words('english'))
 stop_words.add('quot')
@@ -71,10 +47,3 @@ def clean_text(text):
 
 
 data['clean_tweet'] = data['tweet'].apply(clean_text)
-
-
-# In[ ]:
-
-
-
-
