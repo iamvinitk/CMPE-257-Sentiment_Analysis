@@ -20,8 +20,8 @@ def tbl_alignment(s):
         "AlignCenter": 'c',
         "AlignRight": 'r',
     }
-    return ''.join([aligns[e['t']] for e in s])
-
+    # filter None values
+    return ''.join([aligns[a['t']] for a in s if a])
 
 def tbl_headers(s):
     result = s[0][0]['c'][:]

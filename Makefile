@@ -1,31 +1,14 @@
 all: paper.md paper.bib
-	pandoc -r markdown+smart+simple_tables+table_captions+yaml_metadata_block \
-		--pdf-engine=/Library/TeX/texbin/pdflatex \
-		--variable classoption=twocolumn \
-		--citeproc \
-		--filter scripts/table-filter.py \
-		--filter pandoc-tablenos \
-		--filter pandoc-fignos \
-		--filter pandoc-eqnos \
-		--csl=./styles/ieee.csl \
-		-M fignos-warning-level=0 \
-		--bibliography=paper.bib \
-		-s paper.md \
-		-o paper.pdf
+	pandoc \
+    --from=markdown \
+    --to=latex \
+    --template=template.latex \
+    --filter=pandoc-crossref \
+    --citeproc \
+    --bibliography=paper.bib \
+    --csl=./styles/ieee.csl \
+    --output=paper.pdf \
+    paper.md
 
-tex: paper.md paper.bib
-	pandoc -r markdown+smart+simple_tables+table_captions+yaml_metadata_block \
-		--pdf-engine=/Library/TeX/texbin/pdflatex \
-		--variable classoption=twocolumn \
-		--filter pandoc-citeproc \
-		--filter scripts/table-filter.py \
-		--filter pandoc-tablenos \
-		--filter pandoc-fignos \
-		--filter pandoc-eqnos \
-		--csl=./styles/ieee.csl \
-		-M fignos-warning-level=0 \
-		--bibliography=paper.bib \
-		-s paper.md \
-		-o paper.tex
 clean:
 	rm *.tex *.pdf
