@@ -26,7 +26,8 @@ Sentiment analysis, also known as opinion mining, is the process of automaticall
 
 Machine learning is a powerful tool for performing sentiment analysis on Twitter data. Machine learning algorithms can learn from examples and make predictions based on patterns in the data. In this paper, we investigate the use of machine learning approaches for sentiment analysis on Twitter data. We compare the performance of several popular machine learning algorithms, and evaluate their ability to accurately predict the sentiment of tweets.
 
-The Sentiment140 dataset is collected using Twitter Search API for one such study, and the tweets are labeled on the assumption that positive emoticons such as :) denote positive emotion and negative emoticons such as :( denote a negative emotion. 
+The Sentiment140 dataset is collected using Twitter Search API for one such study, and the tweets are labeled on the assumption that positive emoticons such as :) denote positive emotion and negative emoticons such as :( denote a negative emotion.
+[TODO: Add more details about the dataset]
 
 # Data Preprocessing
 
@@ -97,6 +98,7 @@ We plotted word clouds for all the positive and negative labels, to visualize th
 ![Fig()](./images/negative_word_cloud.png "Fig. Negative Word cloud")\
 *Fig. Negative Word cloud*
 
+[TODO - Vinit - Top 10 Words]
 
 #### Observations
 Learning from the data:
@@ -118,6 +120,7 @@ Our data deals with text and its keywords. Since the machine doesn't actually kn
 We used the Tf-Idf vectorizer by SciKit Learn for doing that. It adds weights to a word based on the total number of times the word has appeared in the dataset. 
 The function can also retrieve the number of features we require based on our input.
 
+[TODO - Everyone - Add more details about the methods]
 ## Topic Modeling
 
 ### Pachinko Allocation
@@ -137,16 +140,18 @@ Through a Directed Acyclic Graph, each topic created by a PAM is connected to th
 | Naive Bayes Classifier   | 0.77     | 0.77      | 0.77   | 0.77     |
 | LinearSVC                | 0.77     | 0.77      | 0.77   | 0.77     |
 | SVD                      | 0.77     | 0.77      | 0.77   | 0.77     |
-| XGBoost Classifier       | 0.77     | 0.77      | 0.77   | 0.77     |
-| Random Forest Classifier | 0.77     | 0.77      | 0.77   | 0.77     |
+| XGBoost Classifier       | 0.59     | 0.68      | 0.59   | 0.60     |
+| Random Forest Classifier | 0.60     | 0.60      | 0.60   | 0.60     |
+| LSTM                     | 0.78     | 0.78      | 0.78   | 0.78     |
 
 
 
 # Example Analysis
-
+[TODO - Vinit]
   
 
 # Conclusions
+[TODO - Sathvick & Prabhath]
 
 
 # References
