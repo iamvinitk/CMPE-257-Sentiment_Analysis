@@ -134,13 +134,12 @@ Through a Directed Acyclic Graph, each topic created by a PAM is connected to th
 ---------------------------------------
 | Model                    | Accuracy | 
 |--------------------------|----------|
-| Logistic Regression      | 0.77     | 
-| Decision Tree Classifier | 0.72     |  
-| Naive Bayes Classifier   | 0.77     | 
-| LinearSVC                | 0.77     |
-| SGD                      | 0.77     | 
-| XGBoost Classifier       | 0.59     | 
-| Random Forest Classifier | 0.60     | 
+| Logistic Regression      | 0.73     | 
+| Decision Tree Classifier | 0.64     |  
+| Naive Bayes Classifier   | 0.72     | 
+| LinearSVC                | 0.80     |
+| XGBoost Classifier       | 0.68     | 
+| Random Forest Classifier | 0.61     | 
 | LSTM                     | 0.78     |
 ---------------------------------------
 
