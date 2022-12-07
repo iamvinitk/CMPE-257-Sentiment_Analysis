@@ -61,7 +61,7 @@ We plotted word clouds for all the positive and negative labels, to visualize th
 *Fig. Word cloud*
 
 
-#### Observations
+### Observations
 Learning from the data:
 There’s clearly a pattern between the words which we generally define as either good or bad. 
 Words such as ‘work’, ‘today’, ‘hate’ etc., usually refers to a negative emotion, while words such as ‘good’, ‘thank’, ‘like’ are referred to as something positive. 
@@ -124,13 +124,13 @@ Through a Directed Acyclic Graph, each topic created by a PAM is connected to th
 ![Fig()](./images/pam.png "Fig. PAM")\
 *Fig. PAM*
 
-# Comparisons
+## Comparisons
 
 
-# Example Analysis
+## Example Analysis
   
 
-# Conclusions
+## Conclusions
 
 ### 1. Do you have enough data to learn?
 
