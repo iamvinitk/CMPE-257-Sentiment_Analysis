@@ -60,14 +60,6 @@ We plotted word clouds for all the positive and negative labels, to visualize th
 ![Fig()](./images/all_word_cloud.png "Fig. Word cloud")\
 *Fig. Word cloud*
 
-### Word cloud for positive tweets
-![Fig()](./images/positive_word_cloud.png "Fig. Positive Word cloud")\
-*Fig. Positive Word cloud*
-
-### Word cloud for negative tweets
-![Fig()](./images/negative_word_cloud.png "Fig. Negative Word cloud")\
-*Fig. Negative Word cloud*
-
 
 #### Observations
 Learning from the data:
