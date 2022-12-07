@@ -314,3 +314,11 @@ accuracy.This means that our Eout -> Ein. Overall, we can tell that we implement
 learning helped in getting better test results.
 
 ![Two step learning](./images%2Ftwo_step_learning.png)
+
+
+# References
+1. https://github.com/flairNLP/flair
+2. https://bab2min.github.io/tomotopy/v0.12.3/en/
+3. https://iq.opengenus.org/pachinko-allocation-model/
+4. https://radimrehurek.com/gensim/models/fasttext.html
+5. https://keras.io/api/layers/recurrent_layers/lstm/
