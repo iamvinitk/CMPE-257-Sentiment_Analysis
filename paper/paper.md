@@ -28,6 +28,16 @@ header-includes: |
 
 ---
 
+# Abstract
+
+Twitter is a popular social media platform that has become an important source of data for sentiment analysis. In this
+paper, we investigate the use of machine learning approaches for analyzing the sentiment of tweets. We compare the
+performance of several popular machine learning algorithms on a dataset of Twitter data, and evaluate their ability to
+accurately predict the sentiment of tweets. Our results show that LSTM and Support Vector Classifier performed well on
+this task, achieving an accuracy of over 78%. We also discuss the challenges of sentiment analysis on Twitter data, and
+highlight the importance of data cleaning and preprocessing for improving the performance of machine learning
+algorithms. [Demo Link](https://iamvinitk-cmpe-257-sentiment-analy-streamlit-deploymain-4mavnd.streamlit.app/)
+
 # Introduction
 
 Twitter is a popular social media platform that allows users to post short messages, known as tweets, which can be up to
@@ -51,7 +61,9 @@ assumption that positive emoticons such as :) denote positive emotion and negati
 negative emotion.
 We are using various machine learning algorithms for performing the classification and as an evaluation metric.
 
-# Data Preprocessing
+# Methodology
+
+## Data Preprocessing
 
 Performing data cleaning on text data can help improve the accuracy of the analysis by removing irrelevant or noisy
 data, and it can also make the data more manageable by reducing the dimensionality and making it easier to work with.
@@ -87,16 +99,22 @@ lemma = WordNetLemmatizer()
 
 def preprocess(text):
     text = str(text).lower().strip()
-    text = re.sub(r'http\S+|www.\S+', '', text)
+    text = re.sub(r'http\S+|www.\S+', '',
+                  text)
     text = re.sub(r'@\S+', '', text)
     text = re.sub(r'#\S+', '', text)
     text = re.sub(r'RT', '', text)
-    text = re.sub(r'(.)\1\1+', r'\1\1', text)
-    text = re.sub("[^a-zA-Z0-9]", " ", text)
+    text = re.sub(r'(.)\1\1+',
+                  r'\1\1', text)
+    text = re.sub("[^a-zA-Z0-9]",
+                  " ", text)
     text = word_tokenize(text)
-    text = [item for item in text if item not in stop_words]
-    text = [lemma.lemmatize(w) for w in text]
-    text = [i for i in text if len(i) > 1]
+    text = [item for item in text if
+            item not in stop_words]
+    text = [lemma.lemmatize(w) for w
+            in text]
+    text = [i for i in text if
+            len(i) > 1]
     text = ' '.join(text)
     return text
 ```
@@ -152,15 +170,15 @@ This can be considered as one of our evaluation metrics as we can visually infer
 learnt something.
 However, it is not very accurate.
 
-# Methods
+## Sentiment Analysis
+
+### Tf-Idf Vectorizer
 
 Our data deals with text and its keywords. Since the machine doesn't actually know what those keywords actually are, it
 needs to learn from that data to know which words determine which sentiment.
 We used the Tf-Idf vectorizer by SciKit Learn for doing that. It adds weights to a word based on the total number of
 times the word has appeared in the dataset.
 The function can also retrieve the number of features we require based on our input.
-
-## Sentiment Analysis
 
 ### XGBoost Classifier
 
@@ -253,6 +271,19 @@ contextual representations of words in a text.
 
 ## Topic Modeling
 
+### Latent Dirchilet ALlocation
+
+Topic modeling helps in finding the abstract topics present in the text. Latent Dirichlet Allocation (LDA) builds a
+topic per document model and words per topic model, modeled as Dirichlet distributions. We are going to apply LDA to a
+set of documents and split them into topics.
+https://towardsdatascience.com/topic-modeling-and-latent-dirichlet-allocation-in-python-9bf156893c24
+
+We have performed topic modeling using LDA on the entire dataset and generated 10 topics. We tried generating more
+topics but we felt that with LDA we got meaningful topics when we limited the number of topics to 10.
+
+![Topic Modeling using LDA](images/lda.png)
+*Fig. Topic Modeling using LDA*
+
 ### Pachinko Allocation
 
 Pachinko Allocation is a recently proposed method for topic modeling in which documents are represented as a combination
@@ -286,7 +317,11 @@ LSTM & 0.78 \\
 
 # Example Analysis
 
+The model is evaluated on a held-out test set to assess its performance, and its predictions would be used to generate
+insights about the sentiment of the tweets in the dataset.
+
 ![demo-tweet-1.png](images%2Fdemo-tweet-1.png)
+
 ![demo-tweet-2.png](images%2Fdemo-tweet-2.png)
 
 # Conclusions
@@ -315,10 +350,11 @@ learning helped in getting better test results.
 
 ![Two step learning](./images%2Ftwo_step_learning.png)
 
-
 # References
+
 1. https://github.com/flairNLP/flair
 2. https://bab2min.github.io/tomotopy/v0.12.3/en/
 3. https://iq.opengenus.org/pachinko-allocation-model/
 4. https://radimrehurek.com/gensim/models/fasttext.html
 5. https://keras.io/api/layers/recurrent_layers/lstm/
+
