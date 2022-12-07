@@ -271,15 +271,15 @@ contextual representations of words in a text.
 
 ## Topic Modeling
 
-### Latent Dirchilet ALlocation
+### Latent Dirchilet Allocation
 
 Topic modeling helps in finding the abstract topics present in the text. Latent Dirichlet Allocation (LDA) builds a
-topic per document model and words per topic model, modeled as Dirichlet distributions. We are going to apply LDA to a
+topic per-document model and words per topic model, modeled as Dirichlet distributions. We are going to apply LDA to a
 set of documents and split them into topics.
 https://towardsdatascience.com/topic-modeling-and-latent-dirichlet-allocation-in-python-9bf156893c24
 
 We have performed topic modeling using LDA on the entire dataset and generated 10 topics. We tried generating more
-topics but we felt that with LDA we got meaningful topics when we limited the number of topics to 10.
+topics, but we felt that with LDA we got meaningful topics when we limited the number of topics to 10.
 
 ![Topic Modeling using LDA](images/lda.png)
 *Fig. Topic Modeling using LDA*
