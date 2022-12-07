@@ -70,7 +70,6 @@ def preprocess(text):
 ```
 
 ## Train & Test Data Labels
-![data_distribution.png](images/data_distribution.png)
 
 The training dataset consists of equal number of positive and negative tweets. Whereas, the test dataset consists of negative, neutral and positive tweets.
  
@@ -132,18 +131,18 @@ Through a Directed Acyclic Graph, each topic created by a PAM is connected to th
 *Fig. PAM*
 
 # Comparisons
-
-| Model                    | Accuracy | Precision | Recall | F1 Score |
-|--------------------------|----------|-----------|--------|----------|
-| Logistic Regression      | 0.77     | 0.77      | 0.77   | 0.77     |
-| Decision Tree Classifier | 0.72     | 0.72      | 0.72   | 0.72     |
-| Naive Bayes Classifier   | 0.77     | 0.77      | 0.77   | 0.77     |
-| LinearSVC                | 0.77     | 0.77      | 0.77   | 0.77     |
-| SGD                      | 0.77     | 0.77      | 0.77   | 0.77     |
-| XGBoost Classifier       | 0.59     | 0.68      | 0.59   | 0.60     |
-| Random Forest Classifier | 0.60     | 0.60      | 0.60   | 0.60     |
-| LSTM                     | 0.78     | 0.78      | 0.78   | 0.78     |
-
+---------------------------------------
+| Model                    | Accuracy | 
+|--------------------------|----------|
+| Logistic Regression      | 0.77     | 
+| Decision Tree Classifier | 0.72     |  
+| Naive Bayes Classifier   | 0.77     | 
+| LinearSVC                | 0.77     |
+| SGD                      | 0.77     | 
+| XGBoost Classifier       | 0.59     | 
+| Random Forest Classifier | 0.60     | 
+| LSTM                     | 0.78     |
+---------------------------------------
 
 
 # Example Analysis
