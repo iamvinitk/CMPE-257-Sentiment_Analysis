@@ -104,7 +104,16 @@ Naive Bayes is the simplest and fastest classification algorithm for a large chu
 
 ## Topic Modeling
 
+### Latent Dirchilet ALlocation
+
+Topic modeling helps in finding the abstract topics present in the text. Latent Dirichlet Allocation (LDA) builds a topic per document model and words per topic model, modeled as Dirichlet distributions. We are going to apply LDA to a set of documents and split them into topics.
+
+We have performed topic modeling using LDA on the entire dataset and generated 10 topics. We tried generating more topics but we felt that with LDA we got meaningful topics when we limited the number of topics to 10.
+
+![WhatsApp Image 2022-12-06 at 2 49 35 PM](https://user-images.githubusercontent.com/71260061/206093039-1b87eb4c-d3ac-403e-948b-4a337e8a8348.jpeg)
+
 ### Pachinko Allocation
+
 The Directed Acyclic Graph method is used to capture random, hierarchical, and even sparse correlation between subjects.
 The dirichlet distribution is represented by the list of all words that were extracted from the corpus after the stopwords were removed and text processing was completed.
 Through a Directed Acyclic Graph, each topic created by a PAM is connected to the Dirichlet distribution (DAG).
