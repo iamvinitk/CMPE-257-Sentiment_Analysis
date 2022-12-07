@@ -159,6 +159,11 @@ stopwords.
 ![Fig()](./images/negative_word_cloud.png "Fig. Negative Word cloud")\
 *Fig. Negative Word cloud*
 
+### Top-10 Words for the entire dataset
+
+![Fig()](./images/top-10.png "Fig. Top-10 words")\
+*Fig. Top-10 Words*
+
 #### Observations
 
 Learning from the data:
@@ -357,4 +362,6 @@ learning helped in getting better test results.
 3. https://iq.opengenus.org/pachinko-allocation-model/
 4. https://radimrehurek.com/gensim/models/fasttext.html
 5. https://keras.io/api/layers/recurrent_layers/lstm/
+
+
 
