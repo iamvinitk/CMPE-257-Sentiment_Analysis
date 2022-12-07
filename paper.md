@@ -103,7 +103,8 @@ Naive Bayes is the simplest and fastest classification algorithm for a large chu
 
 ## Linear Support Vector Classification
 
-Linear Support Vector Classification is similar to SVC with parameter kernel=’linear’, but implemented in terms of liblinear rather than libsvm, so it has more flexibility in the choice of penalties and loss functions and should scale better to large numbers of samples.This supports both dense and sparse input and the multiclass support is handled according to a one-vs-the-rest scheme.
+Linear Support Vector Classification is similar to SVC with parameter kernel=’linear’, but implemented in terms of liblinear rather than libsvm, so it has more flexibility in the choice of penalties and loss functions and should scale better to large numbers of samples.This supports both dense and sparse input and the multiclass support is handled according to a one-vs-the-rest scheme. 
+https://scikit-learn.org/stable/modules/generated/sklearn.svm.LinearSVC.html
 
 This is the linear model which we have used in our project. We initially trained a Linear Support Vectoer Classification on the training data and tested it on test dataset available in the dataset. The accuracy was less when we used the entire test dataset as test dataset contained tweets belonging to neutral class which werent available in the training dataset. This was the reason behind the less accuracy when we tested the model on test dataseet after removing all the neutral tweets we got better accuracy.
 
@@ -113,6 +114,7 @@ This is the linear model which we have used in our project. We initially trained
 ### Latent Dirchilet ALlocation
 
 Topic modeling helps in finding the abstract topics present in the text. Latent Dirichlet Allocation (LDA) builds a topic per document model and words per topic model, modeled as Dirichlet distributions. We are going to apply LDA to a set of documents and split them into topics.
+https://towardsdatascience.com/topic-modeling-and-latent-dirichlet-allocation-in-python-9bf156893c24
 
 We have performed topic modeling using LDA on the entire dataset and generated 10 topics. We tried generating more topics but we felt that with LDA we got meaningful topics when we limited the number of topics to 10.
 
