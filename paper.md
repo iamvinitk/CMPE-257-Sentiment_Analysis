@@ -136,14 +136,18 @@ Through a Directed Acyclic Graph, each topic created by a PAM is connected to th
 
 # Conclusions
 
-1. Do you have enough data to leatrn?
+### 1. Do you have enough data to learn?
+
 We used  sentiment140 dataset to learn about the sentiment associated with text. We used a training dataset to train the model and later tested using with testing dataset which was available in the dataset. I think the model had enough data to learn as the predictions had good accuracy.
 
 
 
- 2. Are you implementing Two step learning process?
+### 2. Are you implementing Two step learning process?
+
 In our project, we had models which implemented Two step learning process. 
 We can observe that Ein -> 0 as our training accuracy is 78%.The test accuracy is 80% which is close to our training accuracy.This means that our Eout -> Ein. Overall, we can tell that we implemented a two-step learning process and this learning helped in getting better test results.
+
+![WhatsApp Image 2022-12-06 at 9 16 28 PM](https://user-images.githubusercontent.com/71260061/206095943-637ad4b4-0b67-45f2-be7f-11bf66fa69ac.jpeg)
 
 
 
