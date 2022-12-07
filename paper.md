@@ -24,7 +24,9 @@ The objective of our project is to perform sentiment analysis on the Twitter dat
 The Sentiment140 dataset is collected using Twitter Search API for one such study, and the tweets are labeled on the assumption that positive emoticons such as :) denote positive emotion and negative emoticons such as :( denote a negative emotion. 
 We are using various machine learning algorithms for performing the classification and as an evaluation metric.
 
-# Data Preprocessing
+# Methodology
+
+## Data Preprocessing
 We performed various data cleaning techniques before performing classification. 
 Firstly, we checked for missing values in the dataset, and luckily the dataset was compiled properly, so they were labeled properly and had no missing values.
 Since the data is collected from the web it is not very clean and has many stopwords in it.
@@ -37,7 +39,7 @@ The total mentions of those characters and tags in the dataset makeup to more th
 There are many more stopwords that are pre-trained in the natural language toolkit(NLTK) library, that take up to about 15% of the total storage taken up by the dataset.
 We defined a function to remove all those stop words defined in the library, and called it on the train set.
 
-## Train & Test Data Labels
+## Train & Test Data 
 
 The data in the train set is labeled as either 0 or 4. ‘0’ meaning negative sentiment and ‘4’ meaning positive sentiment. But in the test data, there is an additional label ‘2’ which says that the tweet is neutral. This is a serious problem as the model trains on only two sets of labels and while testing all the data with a different label is immediately considered wrong. 
  
@@ -76,7 +78,7 @@ This can be considered as one of our evaluation metrics as we can visually infer
 However, it is not very accurate.
 
 
-# Methods
+## Tf-Idf Vectorizer 
 Our data deals with text and its keywords. Since the machine doesn't actually know what those keywords actually are, it needs to learn from that data to know which words determine which sentiment.
 We used the Tf-Idf vectorizer by SciKit Learn for doing that. It adds weights to a word based on the total number of times the word has appeared in the dataset. 
 The function can also retrieve the number of features we require based on our input.
@@ -150,8 +152,7 @@ In our project, we had models which implemented Two step learning process.
 We can observe that Ein -> 0 as our training accuracy is 78%.The test accuracy is 80% which is close to our training accuracy.This means that our Eout -> Ein. Overall, we can tell that we implemented a two-step learning process and this learning helped in getting better test results.
 
 ![WhatsApp Image 2022-12-06 at 9 16 28 PM](https://user-images.githubusercontent.com/71260061/206095943-637ad4b4-0b67-45f2-be7f-11bf66fa69ac.jpeg)
-
-
+*Fig. Accuracy on train & test*
 
 
 # References
