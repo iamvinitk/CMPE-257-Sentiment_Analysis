@@ -101,6 +101,12 @@ The logistic regression model which is used in our project gives the accuracy of
 ## Naive Bayes
 Naive Bayes is the simplest and fastest classification algorithm for a large chunk of data.It uses the Bayes probability theorem for unknown class prediction. The use of Bayes’ theorem with a strong independence assumption between the features is the basis for naive Bayes classification. All of the features in the Naive Bayes Classifier are assumed to be unrelated. Naive Bayes classifier is a general term which refers to conditional independence of each of the features in the model, while Multinomial Naive Bayes classifier is a specific instance of a Naive Bayes classifier which uses a multinomial distribution for each of the features. The multinomial Naive Bayes classifier is suitable for classification with discrete features. Multinomial Naïve Bayes consider a feature vector where a given term represents the number of times it appears or very often i.e. frequency.
 
+## Linear Support Vector Classification
+
+Linear Support Vector Classification is similar to SVC with parameter kernel=’linear’, but implemented in terms of liblinear rather than libsvm, so it has more flexibility in the choice of penalties and loss functions and should scale better to large numbers of samples.This supports both dense and sparse input and the multiclass support is handled according to a one-vs-the-rest scheme.
+
+This is the linear model which we have used in our project. We initially trained a Linear Support Vectoer Classification on the training data and tested it on test dataset available in the dataset. The accuracy was less when we used the entire test dataset as test dataset contained tweets belonging to neutral class which werent available in the training dataset. This was the reason behind the less accuracy when we tested the model on test dataseet after removing all the neutral tweets we got better accuracy.
+
 
 ## Topic Modeling
 
@@ -111,6 +117,7 @@ Topic modeling helps in finding the abstract topics present in the text. Latent 
 We have performed topic modeling using LDA on the entire dataset and generated 10 topics. We tried generating more topics but we felt that with LDA we got meaningful topics when we limited the number of topics to 10.
 
 ![WhatsApp Image 2022-12-06 at 2 49 35 PM](https://user-images.githubusercontent.com/71260061/206093039-1b87eb4c-d3ac-403e-948b-4a337e8a8348.jpeg)
+*Fig. Topic Modeling using LDA*
 
 ### Pachinko Allocation
 
@@ -128,6 +135,17 @@ Through a Directed Acyclic Graph, each topic created by a PAM is connected to th
   
 
 # Conclusions
+
+1. Do you have enough data to leatrn?
+We used  sentiment140 dataset to learn about the sentiment associated with text. We used a training dataset to train the model and later tested using with testing dataset which was available in the dataset. I think the model had enough data to learn as the predictions had good accuracy.
+
+
+
+ 2. Are you implementing Two step learning process?
+In our project, we had models which implemented Two step learning process. 
+We can observe that Ein -> 0 as our training accuracy is 78%.The test accuracy is 80% which is close to our training accuracy.This means that our Eout -> Ein. Overall, we can tell that we implemented a two-step learning process and this learning helped in getting better test results.
+
+
 
 
 # References
