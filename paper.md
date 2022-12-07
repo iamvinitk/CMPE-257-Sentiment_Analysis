@@ -139,7 +139,7 @@ Through a Directed Acyclic Graph, each topic created by a PAM is connected to th
 | Decision Tree Classifier | 0.72     | 0.72      | 0.72   | 0.72     |
 | Naive Bayes Classifier   | 0.77     | 0.77      | 0.77   | 0.77     |
 | LinearSVC                | 0.77     | 0.77      | 0.77   | 0.77     |
-| SVD                      | 0.77     | 0.77      | 0.77   | 0.77     |
+| SGD                      | 0.77     | 0.77      | 0.77   | 0.77     |
 | XGBoost Classifier       | 0.59     | 0.68      | 0.59   | 0.60     |
 | Random Forest Classifier | 0.60     | 0.60      | 0.60   | 0.60     |
 | LSTM                     | 0.78     | 0.78      | 0.78   | 0.78     |

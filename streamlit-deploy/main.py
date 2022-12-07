@@ -5,11 +5,14 @@ from keras_preprocessing.sequence import pad_sequences
 import tensorflow as tf
 
 
-@st.cache
+@st.cache(allow_output_mutation=True)
 def load():
-    k_model = tf.keras.models.load_model('./model/training_cleaned.h5')
-    tokenizer_model = pickle.load(open("./models/tokenizer.pkl", 'rb'))
-    return k_model, tokenizer_model
+    k_model = tf.keras.models.load_model('./streamlit-deploy/models/training_cleaned.h5')
+    tokenizer_model = pickle.load(open("./streamlit-deploy/models/tokenizer.pkl", 'rb'))
+    # return the deep copy of the model
+    deep_copy = tf.keras.models.clone_model(k_model)
+    deep_copy.set_weights(k_model.get_weights())
+    return deep_copy, tokenizer_model
 
 
 def decode_sentiment(score, include_neutral=True):
@@ -39,7 +42,7 @@ def predict(_text, include_neutral=True):
     return {"label": label, "score": float(score)}
 
 
-st.title("My first app")
+st.title("Twitter Sentiment Analysis")
 
 text = st.text_input("Enter your text here")
 submit = st.button("Submit")
@@ -47,4 +50,4 @@ submit = st.button("Submit")
 if submit & (text != ""):
     st.write("You entered: ", text)
     result = predict(text)
-    st.text(f"Sentiment: {result['label']} \n Confidence: {result['score']}")
+    st.text(f"Sentiment: {result['label']} \nConfidence: {result['score']}")
