@@ -60,6 +60,9 @@ We plotted word clouds for all the positive and negative labels, to visualize th
 ![Fig()](./images/all_word_cloud.png "Fig. Word cloud")\
 *Fig. Word cloud*
 
+### Top-10 Words for the entire dataset
+![WhatsApp Image 2022-12-06 at 5 07 06 PM (1)](https://user-images.githubusercontent.com/71260061/206098433-d3a89856-7dfb-40bd-ac63-67360dd0abf9.jpeg)
+*Fig. Top-10 Words*
 
 ### Observations
 Learning from the data:
