@@ -187,62 +187,45 @@ The function can also retrieve the number of features we require based on our in
 
 ### XGBoost Classifier
 
-It is a gradient boosting package that implements a gradient boosting framework. The algorithm is scalable for parallel
-computing and is considered as the algorithm of choice for classification and regression. The XGBoost library implements
-the gradient boosting decision tree algorithm.Effective with large data sets. It stands out as the leading machine
-learning library for regression, classification, and ranking problems. The two primary reasons to use XGBoost are its
-execution speed and model performance making it a popular supervised-learning algorithm used for regression and
-classification on large datasets. Since the gradient of the data is considered for each tree, the calculation is faster
-and the precision is accurate than Random Forest.
+It is a gradient boosting framework implemented from a package of gradient boosting. The approach is considered one of
+the best algorithm choices for classification and regression since it scales well for parallel computing. Gradient
+boosting decision tree implementation is done via the XGBoost package. It also produces accurate predictions with vast
+data sets. For classification, regression, and ranking issues, it stands out as the top machine-learning library. The
+two primary reasons to use XGBoost are the model performance and execution speed, making it a preferred
+supervised-learning algorithm to use for classification and regression on huge datasets. In comparison to Random Forest,
+the calculation is quicker and the precision is accurate because the gradient of the data is taken into account for each
+tree.
 
 ### Random Forest Classifier
 
-Random forest is a commonly-used machine learning algorithm, which combines the output of multiple decision trees to
-reach a single result. Random forest is a Supervised Machine Learning Algorithm that is used widely in Classification
-and Regression problems. It builds decision trees on different samples and takes their majority vote for classification
-and average in case of regression.Before understanding the working of the random forest algorithm in machine learning,
-we must look into the ensemble technique. Ensemble simply means combining multiple models. Thus, a collection of models
-is used to make predictions rather than an individual model. Random forests are created from subsets of data and the
-final output is based on average or majority ranking and hence the problem of over-fitting is taken care of.
-
-Random forest randomly selects observations, builds a decision tree and the average result is taken. It doesn't use any
-set of formulas.Random forest builds multiple decision trees and merges them together to get a more accurate and stable
-prediction. The “forest” it builds is an ensemble of decision trees, usually trained with the “bagging” method. The
-general idea of the bagging method is that a combination of learning models increases the overall result.Random forest
-adds additional randomness to the model while growing the trees. Instead of searching for the most important feature
-while splitting a node, it searches for the best feature among a random subset of features. This results in a wide
-diversity that generally results in a better model.
-Tree algorithms such as XGBoost and Random Forest do not need normalized features and work well if the data is
-nonlinear, non-monotonic, or with segregated clusters.
+Random forest is a commonly-used supervised machine learning algorithm, that combines the results of various decision
+trees to get a single outcome. The issue of overfitting is solved by it as it is built from data subsets and the end
+result depends on the average or majority ratings, in our case it considers the majority of votes in the classification.
+It generates a decision tree from observations that are chosen at random, then it calculates the average outcome. It
+makes no use of any formulas. While the trees are being grown, random forest increases the model's unpredictability.
+While splitting a node, it looks for the best feature from a random subset of features rather than the most crucial one.
+Due to the enormous variation created by this, the model is generally better.
 
 ### Logistic Regression
 
-It is a type of statistical model that is often used for classification and predictive analytics. Logistic regression
-estimates the probability of an event occurring, based on a given dataset of independent variables. logistic regression
-is also used to estimate the relationship between a dependent variable and one or more independent variables, but it is
-used to make a prediction about a categorical variable versus a continuous one. It is also considered a discriminative
-model, which means that it attempts to distinguish between classes (or categories). Logistic Regression is used when the
-dependent variable(target) is categorical. Logistic regression helps organizations gain actionable insights from their
-business data. Less complex than other ML methods and also can process large volumes of data at high speed because they
-require less computational capacity,
-
-The logistic regression model which is used in our project gives the accuracy of the model in predicting the sentiments
-correctly, a confusion matrix to evaluate the model performance and classification report with evaluation metrics like
-accuracy, precision, recall, f1-score, support, macro average and weighted average. As a part of building sentiment
-classifiers using logistic regression, we train the model on Twitter sample dataset. It is called supervised because the
-model predictions are iteratively evaluated and corrected against the output values, until an acceptable performance is
-achieved.
+It's a kind of statistical model that's frequently employed in categorization and predictive modeling. Based on a
+collection of independent variables and a particular dataset, logistic regression calculates the likelihood that a
+certain event will occur. We have employed this model as the target variable is categorical in our case. A sample
+dataset from Twitter was used to train the sentiment classifier model we built using logistic regression. The logistic
+regression model which is used in our project gives the accuracy of the model in predicting the sentiments correctly, a
+confusion matrix to evaluate the model performance, and a classification report with evaluation metrics like accuracy,
+precision, recall, f1-score, support, macro average, and weighted average.
 
 ### Naive Bayes
 
-Naive Bayes is the simplest and fastest classification algorithm for a large chunk of data.It uses the Bayes probability
-theorem for unknown class prediction. The use of Bayes’ theorem with a strong independence assumption between the
-features is the basis for naive Bayes classification. All the features in the Naive Bayes Classifier are assumed to
-be unrelated. Naive Bayes classifier is a general term which refers to conditional independence of each of the features
-in the model, while Multinomial Naive Bayes classifier is a specific instance of a Naive Bayes classifier which uses a
-multinomial distribution for each of the features. The multinomial Naive Bayes classifier is suitable for classification
-with discrete features. Multinomial Naive Bayes consider a feature vector where a given term represents the number of
-times it appears or very often i.e. frequency.
+The quickest and easiest classification approach for a sizable amount of data is Naive Bayes. The Bayes probability
+theorem is applied to the prediction of unknown classes. Naive Bayes classification is based on the Bayes theorem and a
+strong assumption of feature independence.
+The Naive Bayes Classifier presumes that there are no relationships between any of the features. It refers to the
+conditional independence of each of the features in the model. An example of a Naive Bayes classifier that employs a
+multinomial distribution for each of the features is the Multinomial Naive Bayes classifier. For classification using
+discrete features, the multinomial Naive Bayes classifier is appropriate. It takes into account a feature vector in
+which a given term denotes the frequency—that is, how frequently it appears—or how many times it does so.
 
 ### Linear Support Vector Classification
 
@@ -362,6 +345,8 @@ learning helped in getting better test results.
 3. https://iq.opengenus.org/pachinko-allocation-model/
 4. https://radimrehurek.com/gensim/models/fasttext.html
 5. https://keras.io/api/layers/recurrent_layers/lstm/
+
+
 
 
 
